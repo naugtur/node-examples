@@ -1,2 +1,3 @@
-# node-examples
-examples for node trainings
+# Training examples
+
+Various examples that I use for teaching 
