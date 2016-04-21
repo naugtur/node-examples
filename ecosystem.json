@@ -24,7 +24,7 @@
      */
     deploy: {
         dev: {
-            key: "/home/naugtur/.ssh/id_rsa",
+            key: "PATH_TO_PRIVATE_KEY",
             user: "node",
             host: "127.0.0.1",
             port: "11122",

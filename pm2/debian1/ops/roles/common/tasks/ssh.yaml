@@ -1,0 +1,17 @@
+- name: add node group
+  group:
+    name=node
+    state=present
+
+- name: add node user
+  user:
+    name=node
+    group=node
+    shell="/bin/bash"
+    comment="node runner"
+
+- name: add home SSH key
+  authorized_key:
+    manage_dir=yes
+    user=node
+    key="INSERT_PUBKEY"

@@ -1,0 +1,10 @@
+---
+- name: install redis
+  apt:
+    name=redis-server
+    state=present
+
+- name: create redis user
+  user:
+    name=redis
+    state=present
