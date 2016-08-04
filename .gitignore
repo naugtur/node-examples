@@ -1,3 +1,4 @@
 /node_modules
 /core
 /heapdump*
+/promises/node_modules/bluebird
