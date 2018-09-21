@@ -4,4 +4,6 @@
 - implementing queue with a promise
 - promisification
 - error forwarding
-- error recovery
+
+### optional
+- error recovery 09

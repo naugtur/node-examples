@@ -1,8 +1,8 @@
 'use strict';
 
-const fakeDBContains = require('db')
+const fakeDBFromArray = require('db').fakeDBFromArray
 
-const db = fakeDBContains(['list','item1','item2','item3','item1details','item2details','item3details'])
+const db = fakeDBFromArray(['list','item1','item2','item3','item1details','item2details','item3details'])
 //variants of broken data:
 // const db = fakeDBContains(['list','item1','item2','item3'])
 // const db = fakeDBContains(['list','item1','item2','item3','item1details','item2details'])

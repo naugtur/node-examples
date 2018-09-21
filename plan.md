@@ -1,5 +1,6 @@
-## explain
-- es6 features https://nodejs.org/en/docs/es6/
-- wait till es6 modules are ready http://nodeup.com/ninetynine
-- why 'use strict' not global strict mode
-- pm2 and deploying with json
+## resources
+- Ecmascript support status https://node.green/
+- modules https://nodejs.org/api/esm.html#esm_ecmascript_modules
+
+## other repos
+naugtur/node-example-*

@@ -1,8 +1,0 @@
----
-- hosts: all 
-  gather_facts: yes
-  roles:
-    - common
-    - node
-    - redis
-    - pm2

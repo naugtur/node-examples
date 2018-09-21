@@ -1,6 +1,6 @@
 'use strict';
 
-const spawnPerson = require('situations/dude')
+const spawnPerson = require('situations/person')
 
 function entersStore(name) {
     return spawnPerson(name)
@@ -9,6 +9,7 @@ function entersStore(name) {
         })
 }
 
-const names = ['Adam', 'Bruce', 'Carl', 'Doug', 'Elon']
+const names = ['Alice', 'Bruce', 'Cecil', 'Doug', 'Emma']
 
 //make them enter the store in order
+

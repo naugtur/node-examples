@@ -1,6 +1,8 @@
 'use strict';
 
-//npm install request bluebird
+//this one uses bluebird
+//run npm install bluebird inside promises directory
+
 const request = require('request')
 const bluebird = require('bluebird')
 
@@ -11,6 +13,8 @@ request('http://www.mocky.io/v2/56fae5d3100000920a68789d', (err, response) => {
 })
 
 //make this work:
+// const promisifiedRequest = ;
+
 promisifiedRequest('http://www.mocky.io/v2/56fae5d3100000920a68789d')
 .then((response)=>{
     console.log(2, response.statusCode)
@@ -18,6 +22,8 @@ promisifiedRequest('http://www.mocky.io/v2/56fae5d3100000920a68789d')
 
 
 //and then make it fail the promise when http status is not 200
+// const promisifiedRequest2 = ;
+
 promisifiedRequest2('http://www.mocky.io/v2/56fae5d3100000920a68789d')
 .catch((error)=>{
     console.log(3.1, error.message)
