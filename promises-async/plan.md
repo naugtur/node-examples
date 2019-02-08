@@ -1,4 +1,4 @@
-## promises
+## topics
 - chaining, starting a chain
 - parallel
 - promisification

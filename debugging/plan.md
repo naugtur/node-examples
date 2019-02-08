@@ -1,5 +1,0 @@
-- blocking the loop
-- throwing inside express handler
-- unanswered request and invalid promise
-- debug memory leak with heapdumps
-- consume all memory

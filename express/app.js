@@ -4,13 +4,6 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const tap = require('./middlewares/tap')
 
-function echo(req, res) {
-    res.send(req.url)
-}
-
-function kaboom(req, res) {
-    throw Error('sorry')
-}
 
 const app = express()
 const router = express.Router()
@@ -23,8 +16,18 @@ router.post('/posthere', echo)
 router.get('/unicorns', echo)
 router.get('/dragons', kaboom)
 
-app.get('/check', echo)
+//use the router configured above
 app.use('/api', router)
+app.get('/check', echo)
 
 
 app.listen(1337)
+
+// some handlers you can try 
+function echo(req, res) {
+    res.send(req.url)
+}
+
+function kaboom(req, res) {
+    throw Error('sorry')
+}

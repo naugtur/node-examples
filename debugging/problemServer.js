@@ -17,7 +17,7 @@ app.get('/heapdump', function(req, res) {
     });
 })
 
-app.listen(1337)
+app.listen(1337,()=>console.log('http://localhost:1337/problem/'))
 
 //dummy monitoring
 const blocked = require('blocked')
