@@ -4,12 +4,13 @@
   "private": true,
   "description": "Various examples that I use for teaching",
   "dependencies": {
-    "bluebird": "^3.3.4",
     "blocked": "^1.2.1",
-    "body-parser": "^1.15.0",
-    "heapdump": "^0.3.7",
-    "express": "^4.13.4",
-    "request": "^2.69.0"
+    "bluebird": "^3.5.3",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.4",
+    "heapdump": "^0.3.12",
+    "request": "^2.88.0"
   },
   "repository": {
     "type": "git",
@@ -17,5 +18,9 @@
   },
   "author": "naugtur@gmail.com",
   "license": "SEE LICENSE IN LICENSE.md",
-  "homepage": "https://github.com/naugtur/node-examples"
+  "homepage": "https://github.com/naugtur/node-examples",
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "supertest-session": "^3.3.0"
+  }
 }

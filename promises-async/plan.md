@@ -1,9 +1,10 @@
 ## promises
 - chaining, starting a chain
 - parallel
-- implementing queue with a promise
 - promisification
+- async
+- implementing queue with a promise
 - error forwarding
-
-### optional
-- error recovery 09
+- error recovery
+- async error handling 
+- how promises and async differ 

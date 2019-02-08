@@ -1,7 +1,7 @@
 
 
 //==================================== 04
-// shortest implementation s with reduce
+// shortest implementation with reduce
 names.reduce((prev, name) => prev.then(() => entersStore(name)), Promise.resolve())
 
 
