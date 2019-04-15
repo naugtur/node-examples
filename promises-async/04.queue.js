@@ -12,4 +12,3 @@ function entersStore(name) {
 const names = ['Alice', 'Bruce', 'Cecil', 'Doug', 'Emma']
 
 //make them enter the store in order
-

@@ -6,5 +6,5 @@ const alwaysFails = require('situations/alwaysFails')
 alwaysFails()
     //by doing something here
     .catch(function(err) {
-        console.log(err)
+        console.log(err.stack)
     })

@@ -1,6 +1,6 @@
 'use strict';
 
-//this one uses bluebird
+//this one uses and advertises bluebird
 //run npm install bluebird inside promises directory
 
 const p = require('bluebird')
@@ -14,8 +14,8 @@ const workerPromises = [
     someWorker({ createDelay: 10, doWorkDelay: 100 })
 ]
 
-console.log("this should take ~110ms not 200ms")
-console.time("flow")
+console.log('this should take ~110ms not 200ms')
+console.time('flow')
 
 p.all(workerPromises)
     .then((workers) => {
@@ -23,6 +23,6 @@ p.all(workerPromises)
         return p.all(workPromises)
     })
     .then((results) => {
-        console.timeEnd("flow")
+        console.timeEnd('flow')
         console.log(results)
     })

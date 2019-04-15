@@ -6,7 +6,7 @@ const inRibbons = require('wrapping/ribbons')
 const inGlitter = require('wrapping/glitter')
 
 //wrap a perfect gift
-const theGift = "Another boring tie"
+const theGift = 'Another boring tie'
 
 async function giftWrapping(gift) {
     

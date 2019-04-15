@@ -6,4 +6,4 @@ const inRibbons = require('wrapping/ribbons')
 const inGlitter = require('wrapping/glitter')
 
 //wrap a perfect gift
-const gift = "Another boring tie"
+const gift = 'Another boring tie'

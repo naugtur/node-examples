@@ -1,3 +1,4 @@
+// run and see
 
 function a() {
     console.log(2)
