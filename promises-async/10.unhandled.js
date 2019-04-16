@@ -1,6 +1,6 @@
 const breaksAsyncCallback = require('situations/breaksAsyncCallback');
 
-// This app will randomly crash. Fix it my catching the error currently unhandled
+// This code will randomly crash. Fix it by catching the error currently unhandled
 //  It also demonstrates the risk of using new Promise
 //  Also, compare with util.promisify when you have the time
 
@@ -17,6 +17,6 @@ const work = new Promise((resolve, reject) => {
 
 work.then(console.log, console.error);
 
-setInterval(()=>{
-    console.log('A running interval is preventing app from stopping (just like a running server) - so you can see when the app crashes')
-},10000)
+// A server to crash
+require('http').createServer(()=>{}).listen(1111);
+// As long as the server listens on the port the app should not stop. But an unhandled Exception will crash it, just like it would crash your server with an actual app.

@@ -1,42 +1,16 @@
-const wait = require('situations/wait')
-
 // multiple resolves
-const work = new Promise((resolve, reject) => {
-  setTimeout(() => {
+const work = (input)=> new Promise((resolve, reject) => {
+  switch(input){
+    case 1:
     resolve('ok')
-  }, 100);
-  setTimeout(() => {
-    resolve('ok')
-  }, 1000);
-  setTimeout(() => {
-    resolve('ok')
-  }, 2000);
+    case 2: 
+    resolve('not again')
+    default:
+    setTimeout(() => {
+      resolve('later')
+    }, 1000);
+  }
 });
 
-work.then(console.log, console.error);
+work(1).then(console.log, console.error);
 
-
-//unhandled rejection - broken chain
-wait(100).then(() => {
-  if(true){
-    wait(100).then(() => {
-      throw Error('nested error')
-    })
-  }
-}).catch(() => {})
-
-// delayed handled rejection
-wait(100).then(() => {
-  wait(101).then(() => {
-    throw Error('nested error')
-  })
-  return {
-    hiddenPromise: wait(100).then(() => {
-      throw Error('nested error')
-    })
-  }
-}).then(obj => {
-  setTimeout(()=>{
-    obj.hiddenPromise.catch(console.log)
-  },110)
-})
