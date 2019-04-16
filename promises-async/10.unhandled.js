@@ -1,12 +1,21 @@
-const breaksAsyncCallback = require('situations/breaksAsyncCallback');
-
-// This code will randomly crash. Fix it by catching the error currently unhandled
-//  It also demonstrates the risk of using new Promise
-//  Also, compare with util.promisify when you have the time
+const { breaksAsyncCallbackSometimes, breaksAsyncCallbackAlways } = require('situations/breaksAsyncCallback');
 
 const work = new Promise((resolve, reject) => {
+    breaksAsyncCallbackAlways((err, res) => {
+    if (err) {
+      return reject(err);
+    }
+    return resolve(res);
+  });
+});
+
+// This code will randomly crash. Fix it.
+//  It demonstrates the risk of using new Promise
+//  Also, compare with util.promisify when you have the time
+
+const work2 = new Promise((resolve, reject) => {
   setTimeout(() => {
-    breaksAsyncCallback((err, res) => {
+    breaksAsyncCallbackSometimes((err, res) => {
       if (err) {
         return reject(err);
       }
@@ -15,7 +24,8 @@ const work = new Promise((resolve, reject) => {
   }, 100);
 });
 
-work.then(console.log, console.error);
+work.then(console.log, err=>console.error('work',err));
+work2.then(console.log, err=>console.error('work2',err));
 
 // A server to crash
 require('http').createServer(()=>{}).listen(1111);
