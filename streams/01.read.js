@@ -17,10 +17,18 @@ const request = require('request')
 
 const streamingRequest = request('https://developer.mozilla.org')
 
-const stream = require('stream')
+const { Writable } = require('stream');
 
-const writable = // This is where you come in
+const writable = TODO
 
+//some indication of what's happening
+streamingRequest.on('end', () => console.log("streamingRequest end"))
+streamingRequest.on('finish', () => console.log("streamingRequest finish"))
+writable.on('end', () => console.log("writeable end"))
+writable.on('finish', () => {
+    console.log("writeable finish")
+    console.log(putHTMLhere.substr(-10, 10))
+
+})
 //implement something to put all contents in the putHTMLhere variale
 streamingRequest.pipe(writable)
-
