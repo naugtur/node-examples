@@ -10,7 +10,7 @@
     "cookie-parser": "^1.4.3",
     "express": "^4.16.4",
     "heapdump": "^0.3.12",
-    "request": "^2.88.0"
+    "stream-spectrum": "^0.1.6"
   },
   "repository": {
     "type": "git",
