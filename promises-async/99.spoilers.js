@@ -4,6 +4,17 @@
 // shortest implementation with reduce
 names.reduce((prev, name) => prev.then(() => entersStore(name)), Promise.resolve())
 
+//==================================== 10.4
+
+function getListCached() {
+    if (!cache) {
+      cache = populateCache();
+      return cache;
+    } else {
+      console.log("   - returning from cache");
+      return cache;
+    }
+  }
 
 //==================================== 13
 async function d() {
