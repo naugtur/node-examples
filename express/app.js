@@ -9,12 +9,9 @@ const app = express()
 const router = express.Router()
 
 router.use('/', tap('before'))
-router.use('/posthere', bodyParser.json({type:"*/*"}))
+router.use('/posthere', bodyParser.json({ type: "*/*" }))
 router.use('/', tap('after'))
-router.post('/posthere', (req,res)=>{
-    console.log(req.body["my spoon"])
-    res.end()
-})
+router.post('/posthere', echo)
 
 router.get('/unicorns', echo)
 router.get('/dragons', kaboom)
@@ -24,7 +21,7 @@ app.use('/api', router)
 app.get('/check', echo)
 
 
-app.listen(1337, ()=>{
+app.listen(1337, () => {
     console.log("server started")
 })
 
