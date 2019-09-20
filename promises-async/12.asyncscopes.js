@@ -13,6 +13,7 @@ async function sudoMakeMeASandwitch(){
 sudoMakeMeASandwitch()
 
 
+const { fakeDBFromMap } = require('db')
 
 // parallel await - they're still promises
 const db = fakeDBFromMap({
@@ -22,10 +23,13 @@ const db = fakeDBFromMap({
     item3: 'pancakes' //try wth this missing too
 })
 
-db.get('list')
-    .then(list => Promise.all(list.map(key => db.get(key))))
-    .then(results => console.log(results.join(' ')))
-    .catch(err => console.log('uh oh', err))
+function refactorMe() {
+    return db.get('list')
+        .then(list => Promise.all(list.map(key => db.get(key))), () => { return [] })
+        .then(results => console.log(results.join(' ')))
+        .catch(err => console.log('uh oh', err))
+}
 
 // now rewrite with async await
 
+refactorMe()
