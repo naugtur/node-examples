@@ -1,6 +1,6 @@
 # Preparation for training
 
-- install node with npm. We'll be using node 11 or 12
+- install node with npm. We'll be using node 12
 - run `npm update -g npm` (with sudo if necessary) to get the latest npm on top of that
 
 
@@ -13,6 +13,7 @@ npm install
 ```
 
 ## Homework to get you ready to participate
+If you have noever run any node app on your machine, it's worth trying it first.
 
 ### Prepare:
 ```

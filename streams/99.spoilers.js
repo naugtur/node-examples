@@ -11,3 +11,20 @@ const writable = new Writable({
     }
 });
 
+
+//==================================== 02
+pipeline(
+    fs.createReadStream(source),
+    errorUnlikely(),
+    getCounter("b"),
+    zlib.createGzip(),
+    getCounter("a"),
+    fs.createWriteStream(target),
+    err => {
+      if(err) {
+          console.error('oh no!', err);
+      } else {
+          console.log('done')
+      }
+    }
+  );
