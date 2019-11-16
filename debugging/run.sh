@@ -1,0 +1,1 @@
+node --max-old-space-size=256 problemServer.js
