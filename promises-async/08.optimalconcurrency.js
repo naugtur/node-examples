@@ -1,10 +1,10 @@
 'use strict';
 
 //this one uses and advertises bluebird
-//run npm install bluebird inside promises directory
+//run `npm install bluebird` inside promises-async directory
 
 const p = require('bluebird')
-const someWorker = require('situations/someWorker')
+const someWorker = require('z/situations/someWorker')
 
 // someWorker returns a promise that resolves in `createDelay` miliseconds
 // resolved value is an object with .doWork function - when called it resolves in `doWorkDelay` miliseconds

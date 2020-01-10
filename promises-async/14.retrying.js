@@ -1,7 +1,7 @@
 'use strict'
 
-const failsFirst3 = require('situations/failsFirstN')(3)
-const wait = require('situations/wait')
+const failsFirst3 = require('z/situations/failsFirstN')(3)
+const wait = require('z/situations/wait')
 
 const MAX_RETRIES = 2
 

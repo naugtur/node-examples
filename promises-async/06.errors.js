@@ -1,6 +1,6 @@
 'use strict';
 
-const sometimesFails = require('situations/sometimesFails')
+const sometimesFails = require('z/situations/sometimesFails')
 
 // sometimesFails will randomly reject the promise. The goal here is to reverse ts result.
 // When it rejects, recover from it and make sure the 'Ok' is printed

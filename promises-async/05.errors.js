@@ -1,6 +1,6 @@
 'use strict';
 
-const alwaysFails = require('situations/alwaysFails')
+const alwaysFails = require('z/situations/alwaysFails')
 
 //replace the error with a more descriptive one
 alwaysFails()

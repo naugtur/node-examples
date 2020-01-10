@@ -1,3 +1,5 @@
+//==================================== 01
+inBox(gift).then(inPaper).then(inRibbons).then(inGlitter).then(console.log, console.error)
 
 
 //==================================== 04

@@ -1,5 +1,4 @@
-/node_modules
+node_modules
 /core
 /heapdump*
-/promises-async/node_modules/bluebird
 ~*

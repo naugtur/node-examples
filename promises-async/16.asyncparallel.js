@@ -1,6 +1,6 @@
 // run node --require debugging-aid/promises 16.asyncparallel.js
-const alwaysFails = require('situations/alwaysFails')
-const wait = require('situations/wait')
+const alwaysFails = require('z/situations/alwaysFails')
+const wait = require('z/situations/wait')
 
 // A normal way to run in parallel is to use Promise.all()
 // It could be skipped as seen in run1, but may result in an unhandled rejection situation.

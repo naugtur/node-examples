@@ -1,6 +1,6 @@
 'use strict';
 
-const spawnPerson = require('situations/person')
+const spawnPerson = require('z/situations/person')
 
 function entersStore(name) {
     return spawnPerson(name)

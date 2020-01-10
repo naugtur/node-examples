@@ -1,6 +1,6 @@
 'use strict';
 
-const fakeDBFromMap = require('db').fakeDBFromMap
+const fakeDBFromMap = require('z/db').fakeDBFromMap
 
 
 

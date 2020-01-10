@@ -1,4 +1,4 @@
-const wait = require('situations/wait')
+const wait = require('z/situations/wait')
 
 //unhandled rejection - broken chain
 wait(100).then(() => {

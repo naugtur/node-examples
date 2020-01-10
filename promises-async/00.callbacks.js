@@ -14,9 +14,12 @@ setImmediate(() => {
 setTimeout(() => {
     console.log('5.b');
 }, 0)
+
+// this is node specific
 process.nextTick(() => {
     console.log('5.a');
 })
+
 console.log(4);
 
 

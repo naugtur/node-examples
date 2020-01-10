@@ -1,6 +1,6 @@
 'use strict';
 
-const fakeDBFromArray = require('db').fakeDBFromArray
+const fakeDBFromArray = require('z/db').fakeDBFromArray
 
 const db = fakeDBFromArray(['list','item1','item2','item3','item1details','item2details','item3details'])
 //variants of broken data:

@@ -1,4 +1,6 @@
-const get = require("helpers/get");
+// This one can only work in Node.js
+
+const get = require("z/helpers/get");
 
 function populateCache() {
   return get("https://jsonplaceholder.typicode.com/todos", 5000);

@@ -9,7 +9,14 @@ mkdir node-training-sandbox
 cd node-training-sandbox
 git clone https://github.com/naugtur/node-examples
 cd node-examples
-npm install
+npm ci
+cd promises-async
+npm ci
+```
+
+If you like to run some of the examples in the browser instead of Node.js do this as well:
+```
+npm install -g beefy watchify
 ```
 
 ## Homework to get you ready to participate

@@ -1,4 +1,4 @@
-const { breaksAsyncCallbackSometimes, breaksAsyncCallbackAlways } = require('situations/breaksAsyncCallback');
+const { breaksAsyncCallbackSometimes, breaksAsyncCallbackAlways } = require('z/situations/breaksAsyncCallback');
 
 const work = new Promise((resolve, reject) => {
     breaksAsyncCallbackAlways((err, res) => {

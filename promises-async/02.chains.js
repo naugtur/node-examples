@@ -1,8 +1,8 @@
 'use strict';
 
-const promisePeanutButter = require('food/pb')
-const promiseJelly = require('food/jelly')
-const promiseSandwich = require('food/sandwichOfTwo')
+const promisePeanutButter = require('z/food/pb')
+const promiseJelly = require('z/food/jelly')
+const promiseSandwich = require('z/food/sandwichOfTwo')
 
 //make a peanut butter and jelly sandwich
 
