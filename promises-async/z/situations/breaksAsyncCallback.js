@@ -6,7 +6,7 @@ module.exports = {
       console.log(">> fail sync");
       throw Error("synchronous failure");
     }
-    return require("helpers")
+    return require('../helpers')
       .delay()
       .then(() => {
         if (Math.random() > 0.3) {

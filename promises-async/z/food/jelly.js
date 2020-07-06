@@ -1,5 +1,5 @@
 'use strict';
 
 module.exports = function promiseJelly() {
-    return require('helpers').delay().then(() => ('jelly'))
+    return require('../helpers').delay().then(() => ('jelly'))
 }
