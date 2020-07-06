@@ -34,21 +34,21 @@ d()
 
 //==================================== 14
 // A good looking promise implementation
-function recursiveRetry(requestFunction, count = 0) {
-    return requestFunction().catch(() => {
+function recursiveRetry(actionFunction, count = 0) {
+    return actionFunction().catch(() => {
         if (++count < MAX_RETRIES) {
             return wait(5)
-                .then(() => recursiveRetry(requestFunction, count))
+                .then(() => recursiveRetry(actionFunction, count))
         }
         throw Error('No more retries')
     })
 }
 
 // Async await implementation
-async function retry(requestFunction) {
+async function retry(actionFunction) {
     for (let i = 0; i < MAX_RETRIES; i++) {
         try {
-            return await requestFunction()
+            return await actionFunction()
         } catch (err) {
             await wait(5)
         }

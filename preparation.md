@@ -39,7 +39,8 @@ node app.js
 
 it should print "works"
 
-### Experiment
+
+### Experiment (optional)
 
 Try writing your first express server 
 

@@ -8,3 +8,7 @@ alwaysFails()
     .catch(function(err) {
         console.log(err.stack)
     })
+
+
+    // ok __.
+    // err   \___.___

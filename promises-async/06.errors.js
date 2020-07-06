@@ -9,6 +9,7 @@ sometimesFails()
     .then(() => {
         throw Error('I wanted failure')
     })
+    
     //don't change anything below this line ;)
     .then(() => {
         console.log('Ok')
@@ -16,3 +17,10 @@ sometimesFails()
     .catch((err) => {
         console.log('Error:', err)
     })
+
+
+    // ok __.    . __.
+    // err   \___./  .
+
+    // ok __.____.   .
+    // err       .\__.
