@@ -14,10 +14,6 @@ cd promises-async
 npm ci
 ```
 
-If you like to run some of the examples in the browser instead of Node.js do this as well:
-```
-npm install -g beefy watchify
-```
 
 ## Homework to get you ready to participate
 If you have noever run any node app on your machine, it's worth trying it first.
