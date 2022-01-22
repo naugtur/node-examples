@@ -9,11 +9,17 @@ console.log(3)
 
 
 setImmediate(() => {
-    console.log('5.c');
+    console.log('5.d');
 })
 setTimeout(() => {
-    console.log('5.b');
+    console.log('5.c');
 }, 0)
+
+
+queueMicrotask(() => {
+    console.log('5.b')
+})
+
 
 // this is node specific
 process.nextTick(() => {

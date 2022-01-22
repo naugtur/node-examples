@@ -21,10 +21,15 @@ pipeline(
     getCounter("a"),
     fs.createWriteStream(target),
     err => {
-      if(err) {
-          console.error('oh no!', err);
-      } else {
-          console.log('done')
-      }
+        if(err) {
+            console.error('oh no!', err);
+        } else {
+            console.log('done')
+        }
     }
-  );
+    );
+
+//==================================== 04
+for await (const chunk of readStream) {
+    contentLength += chunk.length
+}

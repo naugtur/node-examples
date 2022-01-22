@@ -1,5 +1,6 @@
 'use strict';
 
+//TODO: replace with undici.request
 const request = require('request')
 const util = require('util') // this is an important hint ;)
 
@@ -10,7 +11,7 @@ request('http://www.mocky.io/v2/56fae5d3100000920a68789d', (err, response) => {
 })
 
 //make this work:
-const promisifiedRequest = util.promisify(request);
+const promisifiedRequest;
 
 promisifiedRequest('http://www.mocky.io/v2/56fae5d3100000920a68789d')
     .then((response) => {

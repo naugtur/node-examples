@@ -6,8 +6,21 @@ inBox(gift).then(inPaper).then(inRibbons).then(inGlitter).then(console.log, cons
 // shortest implementation with reduce
 names.reduce((prev, name) => prev.then(() => entersStore(name)), Promise.resolve())
 
-//==================================== 10.4
+//==================================== 07
+const ac = new AbortController();
+const signal = ac.signal;
 
+console.time('fetching')
+const fetching = fetch('https://naugtur.pl', {signal}).then((result)=>{
+    console.timeEnd('fetching')
+    return result.status
+})
+var timeoutPromise = promiseDelay(100).then(()=>{
+    ac.abort()
+    throw Error('too slow')
+})
+
+//==================================== 10.4
 function getListCached() {
     if (!cache) {
       cache = populateCache();
@@ -55,3 +68,20 @@ async function retry(actionFunction) {
     }
     throw Error('No more retries')
 }
+  
+  async function infiniteRetry(promiseSomething) {
+    let retries = 0;
+    while (true) {
+      try {
+        return await promiseSomething();
+      } catch (e) {
+        // no 🦊 given
+        if (retries >= MAX_RETRIES) {
+          throw e;
+        }
+        retries++;
+      }
+      await wait(5);
+    }
+  }
+  
