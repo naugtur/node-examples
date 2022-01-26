@@ -5,6 +5,7 @@
 
 
 ```
+npm i -g clinic autocannon debugging-aid
 mkdir node-training-sandbox
 cd node-training-sandbox
 git clone https://github.com/naugtur/node-examples
