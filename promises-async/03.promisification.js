@@ -1,34 +1,52 @@
 'use strict';
 
-//TODO: replace with undici.request
-const request = require('request')
+const dns = require('dns');
+
 const util = require('util') // this is an important hint ;)
 
-
-//reference
-request('http://www.mocky.io/v2/56fae5d3100000920a68789d', (err, response) => {
-    console.log(1, response.statusCode)
+// reference
+dns.lookup('example.com', (err, result) => {
+    console.log(1.1, err, result)
+})
+dns.lookup('localhost', (err, result) => {
+    console.log(1.2, err, result)
+})
+dns.lookup('bad.example.com', (err, result) => {
+    console.log(1.3, err, result)
 })
 
-//make this work:
-const promisifiedRequest;
+// Make this work:
+const promisifiedLookup = "TODO";
 
-promisifiedRequest('http://www.mocky.io/v2/56fae5d3100000920a68789d')
-    .then((response) => {
-        console.log(2, response.statusCode)
-    })
+// promisifiedLookup('example.com')
+//     .then((response) => {
+//         console.log(2, response.statusCode)
+//     })
 
 
-//and then make it fail the promise when http status is not 200
-// const promisifiedRequest2 = ;
+//and then make it fail the promise when domain resolves to 127.0.0.1
+// const promisifiedLookup2 = ;
 
-// promisifiedRequest2('http://www.mocky.io/v2/56fae5d3100000920a68789d')
+// promisifiedRequest2('localhost')
 //     .catch((error) => {
 //         console.log(3.1, error.message)
 //     })
 
-// promisifiedRequest2('http://i0.kym-cdn.com/photos/images/newsfeed/000/096/044/trollface.jpg')
+// promisifiedRequest2('example.com')
 //     .then((response) => {
-//         console.log(3.2, response.statusCode)
+//         console.log(3.2, response)
 //     })
 //     .catch(console.log)
+
+
+// Final task, get this promisified too:
+const that = {
+    data:1,
+    meBadWithPromises(callback){
+        return callback(null, this.data)
+    }
+}
+
+const promisifiedMeBadWithPromises = "TODO";
+
+// promisifiedMeBadWithPromises()  // should not fail

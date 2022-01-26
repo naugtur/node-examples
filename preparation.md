@@ -1,6 +1,6 @@
 # Preparation for training
 
-- install node with npm. We'll be using node 12
+- install node with npm. We'll be using node 16
 - run `npm update -g npm` (with sudo if necessary) to get the latest npm on top of that
 
 
@@ -15,16 +15,16 @@ npm ci
 ```
 
 
-## Homework to get you ready to participate
-If you have noever run any node app on your machine, it's worth trying it first.
+## Check if you're ready to participate
+### First time ever:
 
-### Prepare:
+If you have never run any node app on your machine, it's worth trying it first.
+
 ```
 mkdir homework
 cd homework
 npm init -y
 echo 'console.log("works")' > app.js
-npm install express
 ```
 
 Now check if you can run the app
@@ -35,12 +35,10 @@ node app.js
 
 it should print "works"
 
+### Warmup if you're not a beginner:
 
-### Experiment (optional)
-
-Try writing your first express server 
-
-http://expressjs.com/en/starter/hello-world.html
-
-Run it and check if it works with a browser or curl
-
+Go to promises-async and do the task nr1. Use asynchronous functions and output result with console.log
+```
+node 01.chains.js 
+Another boring tie in a box wrapped in paper wrapped in ribbons sprinkled with glitter 
+```

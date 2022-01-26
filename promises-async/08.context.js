@@ -1,3 +1,6 @@
+// ab -n12 -c3 http://localhost:8080
+// autocannon -c3 -a12 http://localhost:8080
+
 const http = require('http');
 const { AsyncLocalStorage } = require('async_hooks');
 const fetch = require('undici').fetch;
@@ -16,17 +19,22 @@ http.createServer((req, res) => {
 
 function fetchSome() {
     const num = asyncLocalStorage.getStore().id
-    return Promise.resolve((num + Math.random()).toFixed(5))
+    return Promise.resolve(`initial.${idSeq}.${num}`)
         .then(q => fetch(`http://postman-echo.com/get?q=${q}`))
         .then(re => re.json())
-        .then(json => json.args.q)
+        .then(json => {
+            const num2 = asyncLocalStorage.getStore().id
+            return JSON.stringify({ 
+                idSeqLater:idSeq,
+                numLater:num2,
+                q: json.args.q
+            });
+        })
 }
 
 function output(result, idSeq) {
     const num = asyncLocalStorage.getStore().id
-    const summary = `num:${num}, result:${result}, idSeq:${idSeq}`
+    const summary = `num:${num}, result:${result}, idSeqOnOutput:${idSeq}`
     console.log(summary)
     return summary
 }
-
-//TODO: break it with bad queue

@@ -3,8 +3,6 @@
 const express = require('express')
 const app = express()
 
-app.get()
-
 app.get('/problem/:problem', function (req, res) {
   require('./problems/' + req.params.problem)(req, res)
 })

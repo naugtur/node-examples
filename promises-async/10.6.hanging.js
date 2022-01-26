@@ -1,4 +1,8 @@
-// node --expose-gc 10.6
+// node --expose-gc 10.6.hanging.js
+// autocannon -d3 -c999 http://localhost:8080
+// clinic doctor --autocannon [ / --method GET -d10 -c999 ] --  node --expose-gc 10.6.hanging.js
+
+
 const sometimesFails = require('z/situations/sometimesFails')
 
 require("http")

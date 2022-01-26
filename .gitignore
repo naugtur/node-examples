@@ -2,3 +2,5 @@ node_modules
 /core
 /heapdump*
 ~*
+.clinic
+isolate-*.log
