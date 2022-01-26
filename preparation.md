@@ -1,7 +1,7 @@
 # Preparation for training
 
 - install node with npm. We'll be using node 16
-- run `npm update -g npm` (with sudo if necessary) to get the latest npm on top of that
+- (optionally) run `npm update -g npm` to get the latest npm on top of that
 
 
 ```
