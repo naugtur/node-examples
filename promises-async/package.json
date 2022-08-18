@@ -2,7 +2,7 @@
   "name": "promises-async",
   "version": "1.0.0",
   "dependencies": {
-    "undici": "^4.12.2",
+    "undici": "^5.8.2",
     "z": "file:z"
   },
   "devDependencies": {
